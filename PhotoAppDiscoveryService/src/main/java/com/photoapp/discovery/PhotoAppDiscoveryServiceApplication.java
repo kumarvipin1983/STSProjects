@@ -1,13 +1,13 @@
-package com.stacksimplify.restservices;
+package com.photoapp.discovery;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-// adding comments
+
 @SpringBootApplication
-public class SpringbootBuildingblocksApplication {
+public class PhotoAppDiscoveryServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringbootBuildingblocksApplication.class, args);
+		SpringApplication.run(PhotoAppDiscoveryServiceApplication.class, args);
 	}
 
 }
