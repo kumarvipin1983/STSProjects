@@ -1,5 +1,6 @@
 package com.photoapp.api.users.service;
 
+import java.util.Random;
 import java.util.UUID;
 
 import org.modelmapper.ModelMapper;
@@ -27,8 +28,19 @@ public class UserServiceImpl implements UserService {
 		ModelMapper modelMapper = new ModelMapper();
 		modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
 		UserEntity userEntity = modelMapper.map(userDetails, UserEntity.class);
-		userEntity.setEncryptedPassword("test");
+		userEntity.setEncryptedPassword(getRandomNumberString8char());
 		userRepository.save(userEntity);
-		return null;
+		UserDto returnValue = modelMapper.map(userEntity, UserDto.class);
+		return returnValue;
+	}
+
+	public String getRandomNumberString8char() {
+		// It will generate 8 digit random Number.
+		// from 0 to 99999999
+		Random rnd = new Random();
+		int number = rnd.nextInt(99999999);
+
+		// this will convert any number sequence into 6 character.
+		return String.format("%08d", number);
 	}
 }
