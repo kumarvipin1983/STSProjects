@@ -22,7 +22,7 @@ spring:
         - id: users-status-check
           uri: lb://users-ws
           predicates:
-          - Path=/actuator/info
+          - Path=/users/info
           
 #        - id: h2
 #          uri: lb:/users-ws
