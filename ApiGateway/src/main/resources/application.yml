@@ -23,7 +23,6 @@ spring:
           uri: lb://users-ws
           predicates:
           - Path=/users/info
-          
 #        - id: h2
 #          uri: lb:/users-ws
 #          predicates:

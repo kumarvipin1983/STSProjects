@@ -1,0 +1,21 @@
+server:
+  port: ${PORT:8080}
+spring:
+  application:
+    name: todo
+  devtools:
+    restart:
+      enabled: true
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: MST7MDT
+      
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka  
+    register-with-eureka: false
+    fetch-registry: false
+  instance:
+    hostname: localhost
+    instance-id: ${spring.application.name}:${eureka.instance.instance_id:${random.int[1,9999]}}
