@@ -1,10 +1,10 @@
-package com.photoapp.api.gateway;
+package com.spring.apigateway;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ApiGatewayApplicationTests {
+class SpringApiGatewayApplicationTests {
 
 	@Test
 	void contextLoads() {
