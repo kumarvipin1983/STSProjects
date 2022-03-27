@@ -1,7 +1,7 @@
 FROM openjdk:11
 # Author Details: Vipin Kumar
 LABEL MAINTAINER="kumar_vipin1983@yahoo.co.in"
-ENV APPNAME=EurekaAppDiscoveryService
+#ENV APPNAME=EurekaAppDiscoveryService
 ENV EUREKA_URI=http://eurekaappdiscoveryservice:8761/eureka
 #ENV DIRPATH="/home/vip/Documents/Workspace/EurekaAppDiscoveryService"
 #RUN echo "Stopping container and cleaning image"
